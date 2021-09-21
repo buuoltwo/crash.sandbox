@@ -4,7 +4,7 @@ import './App.css'
 import Table from './components/Table'
 import Form from './components/Form'
 
-interface IState {
+export interface IState {
   brands: {
     name: string
     code: number
@@ -31,7 +31,7 @@ function App() {
         </header>
         <main>
           <Table {...tableProps}></Table>
-          <Form></Form>
+          <Form {...tableProps}></Form>
         </main>
         <footer>
           <p>
