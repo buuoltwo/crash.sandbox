@@ -4,14 +4,14 @@ import './App.css'
 import Table from './components/Table'
 
 interface IState {
-  brand: {
+  brands: {
     name: string
     code: number
     remark?: string
     isEnabled: boolean
   }[]
 }
-const initialValue: IState['brand'] = [
+const initialValue: IState['brands'] = [
   {
     name: 'build-your-dream',
     code: 1,
@@ -20,7 +20,7 @@ const initialValue: IState['brand'] = [
   },
 ]
 function App() {
-  const [brands, setBrands] = useState<IState['brand']>(initialValue)
+  const [brands, setBrands] = useState<IState['brands']>(initialValue)
   const tableProps = { brands, setBrands }
   return (
     <div className="App">

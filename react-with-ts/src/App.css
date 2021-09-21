@@ -28,7 +28,9 @@ main {
   background-color: #282c34;
   color: white;
 }
-
+ul {
+  list-style: none;
+}
 .App-link {
   color: #61dafb;
 }
