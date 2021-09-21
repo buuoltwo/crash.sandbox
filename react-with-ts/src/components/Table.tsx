@@ -3,7 +3,7 @@
  * @Author       : zhangming
  * @Date         : 2021-09-21 11:16:08
  * @LastEditors  : zhangming
- * @LastEditTime : 2021-09-21 16:43:52
+ * @LastEditTime : 2021-09-21 17:37:06
  */
 import React from 'react'
 interface IProps {
@@ -23,7 +23,7 @@ const Table: React.FC<IProps> = ({ brands }) => {
       </li>
     ))
 
-  return <ul>{renderList()}</ul>
+  return <ul className="App-table">{renderList()}</ul>
 }
 
 export default Table

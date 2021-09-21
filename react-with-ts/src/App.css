@@ -28,9 +28,24 @@ main {
   background-color: #282c34;
   color: white;
 }
-ul {
+.App-table {
   list-style: none;
 }
+.App-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 16vh;
+}
+.form-item {
+  display: flex;
+  justify-content: inherit;
+}
+.App-input {
+  border-radius: 6px;
+  background-color: #e7acac;
+}
+
 .App-link {
   color: #61dafb;
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import Table from './components/Table'
+import Form from './components/Form'
 
 interface IState {
   brands: {
@@ -30,6 +31,7 @@ function App() {
         </header>
         <main>
           <Table {...tableProps}></Table>
+          <Form></Form>
         </main>
         <footer>
           <p>
