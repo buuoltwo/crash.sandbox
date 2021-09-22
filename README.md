@@ -21,7 +21,7 @@ npm install -g yarn
 > **App.tsx**
 
 ```bash
-create-react-app --templete typescript react-with-ts
+create-react-app --template typescript react-with-ts
 cd react-with-ts && yarn start
 ```
 
