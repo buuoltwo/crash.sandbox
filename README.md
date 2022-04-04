@@ -36,3 +36,37 @@ cd react-with-ts && yarn start
    > parent -> child1 -> child2 -> ... -> child5
 
 2. child5 would apply the value of hook **useContext** as to render.
+
+ # react-memo
+ 
+ ## what is React.memo
+ 
+ eng:https://devdocs.io/react/react-api#reactmemo
+ 
+ zh-cn:https://zh-hans.reactjs.org/docs/react-api.html#reactmemo
+ 
+ 1. create a `index.js` file, then append a child called `Swatch`
+ 
+ 2. index.js is a React component, 
+  - it has states： `count`, `color`
+  - two buttons can control its states and **Re-Render App**
+  - `Swatch` receive props includes `color`
+ 
+ 3. `Swatch` without memo:
+ 
+|                                 |                                |                                  |
+| ------------------------------- | ------------------------------ | -------------------------------- |
+| **SWATCH HAS SAME PROPS:**      | click **color button** 5 times | ReRender App && Re-Render Swatch |
+| **SWATCH HAS Different PROPS:** | click **color button** 5 times | ReRender App && Re-Render Swatch |
+ 
+ 4. `Swatch` wrapped in memo:
+```js 
+ const T = React.memo(Swatch)
+ return <T color={color}></T>
+```
+ 
+|                                 |                                |                                  |
+| ------------------------------- | ------------------------------ | -------------------------------- |
+| **SWATCH HAS SAME PROPS:**      | click **count button** 5 times | ReRender App **Only**            |
+| **SWATCH HAS Different PROPS:** | click **color button** 5 times | ReRender App && Re-Render Swatch |
+ 
